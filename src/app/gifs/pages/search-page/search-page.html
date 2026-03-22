@@ -7,6 +7,23 @@
     (keyup.enter)="txtSearch.value && onSearch(txtSearch.value)" #txtSearch />
 </section>
 
-<section class="py-5 pl-5">
+<!-- <section class="py-5 pl-5">
   <gif-list [gifs]="gifs()" />
-</section>
+</section> -->
+
+
+<!-- bg-red-500  -->
+<div class="h-screen overflow-y-scroll grid grid-cols-2 md:grid-cols-4 gap-4 pt-5"
+  (scroll)="onScroll($event, txtSearch)" #groupDiv>
+
+  @for(group of gifService.trendingGifSearchGroup(); track $index) {
+  <div class="grid gap-4">
+
+    @for(gif of group; track gif.id) {
+    <div>
+      <img class="h-full w-full rounded-lg object-cover" [src]="gif.url" [alt]="gif.title">
+    </div>
+    }
+  </div>
+  }
+</div>

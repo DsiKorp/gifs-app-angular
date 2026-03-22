@@ -5,6 +5,7 @@ export const environment = {
   companySlogan: 'Find the best GIFs¡',
 
   // ApiKeys
+  //https://developers.giphy.com/docs/api/endpoint/#search
   apiKey: 'vG33JQ8s6prblmrrv14PEe2v5PI7A3YU',
   giphyUrl: 'https://api.giphy.com/v1'
 
